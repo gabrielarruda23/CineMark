@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Filmes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="filmes.js"></script>
+</head>
+<body>
+    <header id="cabecalho">
+        <h1><span class="letra">CineMark</span></h1>
+
+        <nav id="menu">
+            <a href="index.html">Home</a>
+            <a href="filmes.html">Cadastro de Filmes</a>
+            <a href="salas.html">Cadastro de Salas</a>
+            <a href="sessoes.html">Cadastro de Sessões</a>
+            <a href="ingressos.html">Venda de Ingressos</a>
+            <a href="disponiveis.html">Sessões Disponíveis</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="titulo-pagina">Cadastro de Filmes</h2>
+
+        <section class="cartaz-container">
+            <form id="formFilme" class="filme-card" style="width:400px;">
+                <h3>Preencha os dados do filme</h3>
+
+                <label for="titulo">Título:</label><br>
+                <input type="text" id="titulo" required><br><br>
+
+                <label for="genero">Gênero:</label><br>
+                <input type="text" id="genero" required><br><br>
+
+                <label for="descricao">Descrição:</label><br>
+                <textarea id="descricao" rows="4" required></textarea><br><br>
+
+                <label for="classificacao">Classificação:</label><br>
+                <select id="classificacao" required>
+                    <option value="">Selecione</option>
+                    <option value="Livre">Livre</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                </select><br><br>
+
+                <label for="duracao">Duração (min):</label><br>
+                <input type="number" id="duracao" required><br><br>
+
+                <label for="estreia">Data de Estreia:</label><br>
+                <input type="date" id="estreia" required><br><br>
+
+                <button type="submit">Salvar Filme</button>
+            </form>
+        </section>
+
+        <section class="cartaz-container" id="listaFilmes"></section>
+    </main>
+
+    <footer id="rodape">
+        <p>&copy; 2025 CineMark. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
